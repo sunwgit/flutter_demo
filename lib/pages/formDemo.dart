@@ -17,7 +17,7 @@ class _FormDemoState extends State<FormDemo> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Container(
+      body: Padding(
         padding: const EdgeInsets.all(20),
         child: Form(
           key: _formKey,
@@ -49,7 +49,7 @@ class _FormDemoState extends State<FormDemo> {
   }
 
   Widget _buildFormItem(String itemName) {
-    return Container(
+    return Padding(
       padding: const EdgeInsets.only(bottom: 30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
