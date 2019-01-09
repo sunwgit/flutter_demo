@@ -11,6 +11,7 @@ import '../pages/textFieldChange.dart';
 import '../pages/retrieveTextFieldValue.dart';
 import '../pages/inkWellDemo.dart';
 import '../pages/dismissDemo.dart';
+import '../pages/basicList.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -43,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'RetrieveInputValue'),
           _buildListView(InkWellDemo(title: 'InkWellDemo'), 'InkWellDemo'),
           _buildListView(DismissDemo(title: 'DismissDemo'), 'DismissDemo'),
+          _buildListView(BasicList(title: 'BasicList'), 'BasicList'),
         ],
       ),
       drawer: DrawerDemo(),
