@@ -8,6 +8,7 @@ import '../pages/tabDemo.dart';
 import '../pages/formDemo.dart';
 import '../pages/focusNodeDemo.dart';
 import '../pages/textFieldChange.dart';
+import '../pages/retrieveTextFieldValue.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -28,11 +29,16 @@ class _MyHomePageState extends State<MyHomePage> {
           _buildListView(Counter(title: '计数器'), '计数器'),
           _buildListView(AnimatedBox(title: '动画'), '动画'),
           _buildListView(SnackBarDemo(title: 'SnackBar'), 'SnackBar'),
-          _buildListView(OrientationList(title: 'OrientationList'), 'OrientationList'),
+          _buildListView(
+              OrientationList(title: 'OrientationList'), 'OrientationList'),
           _buildListView(TabDemo(title: 'TabDemo'), 'TabDemo'),
           _buildListView(FormDemo(title: 'FormDemo'), 'FormDemo'),
-          _buildListView(MyCustomForm(title: 'TextField Focus'), 'TextField Focus'),
-          _buildListView(TextFieldChange(title: 'TextFieldChange'), 'TextFieldChange'),
+          _buildListView(
+              MyCustomForm(title: 'TextField Focus'), 'TextField Focus'),
+          _buildListView(
+              TextFieldChange(title: 'TextFieldChange'), 'TextFieldChange'),
+          _buildListView(RetrieveTextFieldValue(title: 'RetrieveInputValue'),
+              'RetrieveInputValue'),
         ],
       ),
       drawer: DrawerDemo(),
