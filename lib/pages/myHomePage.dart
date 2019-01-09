@@ -7,6 +7,7 @@ import '../pages/orientationList.dart';
 import '../pages/tabDemo.dart';
 import '../pages/formDemo.dart';
 import '../pages/focusNodeDemo.dart';
+import '../pages/textFieldChange.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -31,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
           _buildListView(TabDemo(title: 'TabDemo'), 'TabDemo'),
           _buildListView(FormDemo(title: 'FormDemo'), 'FormDemo'),
           _buildListView(MyCustomForm(title: 'TextField Focus'), 'TextField Focus'),
+          _buildListView(TextFieldChange(title: 'TextFieldChange'), 'TextFieldChange'),
         ],
       ),
       drawer: DrawerDemo(),
