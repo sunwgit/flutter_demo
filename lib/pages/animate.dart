@@ -15,7 +15,7 @@ class _AnimatedBoxState extends State<AnimatedBox> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      backgroundColor: Colors.deepPurpleAccent,
+      // backgroundColor: Colors.deepPurpleAccent,
       body: Center(
         child: AnimatedOpacity(
           opacity: _show ? 1.0 : 0.0,
@@ -23,13 +23,16 @@ class _AnimatedBoxState extends State<AnimatedBox> {
           child: Container(
               width: 200,
               height: 200,
-              color: Colors.greenAccent,
+              color: Colors.deepPurple,
               constraints: BoxConstraints(
                 maxHeight: 300,
                 minWidth: 300,
               ),
               child: Center(
-                child: Text('AnimatedOpacity Demo'),
+                child: Text('AnimatedOpacity Demo',style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18
+                ),),
               )),
         ),
       ),
@@ -41,6 +44,7 @@ class _AnimatedBoxState extends State<AnimatedBox> {
         },
         tooltip: 'toggle Opacity',
         child: Icon(Icons.flip),
+        backgroundColor: Colors.deepPurple,
       ),
     );
   }

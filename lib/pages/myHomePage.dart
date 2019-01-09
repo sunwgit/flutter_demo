@@ -28,10 +28,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: ListView(
+      body: GridView.count(
+        crossAxisCount: 2,
         children: <Widget>[
-          _buildListView(Counter(title: '计数器'), '计数器'),
-          _buildListView(AnimatedBox(title: '动画'), '动画'),
+          _buildListView(Counter(title: 'Counter'), 'Counter'),
+          _buildListView(AnimatedBox(title: 'AnimatedBox'), 'AnimatedBox'),
           _buildListView(SnackBarDemo(title: 'SnackBar'), 'SnackBar'),
           _buildListView(
               OrientationList(title: 'OrientationList'), 'OrientationList'),
@@ -45,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'RetrieveInputValue'),
           _buildListView(InkWellDemo(title: 'InkWellDemo'), 'InkWellDemo'),
           _buildListView(DismissDemo(title: 'DismissDemo'), 'DismissDemo'),
+          _buildListView(BasicList(title: 'BasicList'), 'BasicList'),
           _buildListView(HorizontalList(title: 'HorizontalList'), 'HorizontalList'),
         ],
       ),
@@ -53,13 +55,18 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildListView(Widget widget, String routeName) {
-    return RaisedButton(
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: RaisedButton(
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (_) => widget));
       },
-      child: Text(routeName),
+      child: Text(routeName,style: TextStyle(
+        fontSize: 16
+      ),),
       color: Colors.deepPurple,
-      textColor: Colors.redAccent,
+      textColor: Colors.white,
+    ),
     );
   }
 }
