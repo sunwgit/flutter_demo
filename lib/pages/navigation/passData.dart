@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../model/todo.dart';
+import '../../model/todo.dart';
 
 class PassDataDemo extends StatelessWidget {
   final String title;

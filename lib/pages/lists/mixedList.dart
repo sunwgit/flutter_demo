@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../model/listItem.dart';
+import '../../model/listItem.dart';
 class MixedList extends StatelessWidget {
   MixedList({this.title, @required this.items});
   final String title;
