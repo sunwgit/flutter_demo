@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../model/base.dart';
 import '../pages/counter.dart';
 import '../pages/animate.dart';
 import '../pages/drawerDemo.dart';
@@ -13,6 +14,8 @@ import '../pages/inkWellDemo.dart';
 import '../pages/dismissDemo.dart';
 import '../pages/basicList.dart';
 import '../pages/horizontalList.dart';
+import '../pages/mixedList.dart';
+import '../model/listItem.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -47,7 +50,19 @@ class _MyHomePageState extends State<MyHomePage> {
           _buildListView(InkWellDemo(title: 'InkWellDemo'), 'InkWellDemo'),
           _buildListView(DismissDemo(title: 'DismissDemo'), 'DismissDemo'),
           _buildListView(BasicList(title: 'BasicList'), 'BasicList'),
-          _buildListView(HorizontalList(title: 'HorizontalList'), 'HorizontalList'),
+          _buildListView(
+              HorizontalList(title: 'HorizontalList'), 'HorizontalList'),
+          _buildListView(
+              MixedList(
+                title: 'MixedList',
+                items: List<ListItem>.generate(
+                  20000,
+                  (i) => i % 6 == 0
+                      ? HeadingItem('Heading $i')
+                      : MessageItem('Sender $i', 'Msg:Hello World! $i'),
+                ),
+              ),
+              'MixedList'),
         ],
       ),
       drawer: DrawerDemo(),
@@ -58,15 +73,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: RaisedButton(
-      onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (_) => widget));
-      },
-      child: Text(routeName,style: TextStyle(
-        fontSize: 16
-      ),),
-      color: Colors.deepPurple,
-      textColor: Colors.white,
-    ),
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => widget));
+        },
+        child: Text(
+          routeName,
+          style: TextStyle(fontSize: 16),
+        ),
+        color: THEME_COLOR,
+        textColor: Colors.white70,
+      ),
     );
   }
 }
