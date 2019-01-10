@@ -19,6 +19,7 @@ import '../model/listItem.dart';
 import '../pages/navigation/heroDemo.dart';
 import '../pages/navigation/returnData.dart';
 import '../pages/navigation/passData.dart';
+import '../pages/network/fetchData.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -69,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
           _buildListView(HeroDemo('HeroDemo'), 'HeroDemo'),
           _buildListView(ReturnDataDemo('ReturnDataDemo'), 'ReturnDataDemo'),
           _buildListView(PassDataDemo('PassDataDemo'), 'PassDataDemo'),
+          _buildListView(FetchData('FetchData'), 'FetchData'),
         ],
       ),
       drawer: DrawerDemo(),
