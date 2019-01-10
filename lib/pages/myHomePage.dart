@@ -16,6 +16,7 @@ import '../pages/basicList.dart';
 import '../pages/horizontalList.dart';
 import '../pages/mixedList.dart';
 import '../model/listItem.dart';
+import '../pages/heroDemo.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -63,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               'MixedList'),
+          _buildListView(HeroDemo('HeroDemo'), 'HeroDemo'),
         ],
       ),
       drawer: DrawerDemo(),
