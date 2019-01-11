@@ -11,6 +11,7 @@ Future<List<Photo>> fetchPhoto(http.Client client) async {
       await client.get('https://jsonplaceholder.typicode.com/photos');
   if (response.statusCode == 200) {
     return compute(parsePhotos, response.body);
+    // return parsePhotos(response.body);
   } else {
     throw Exception('error');
   }
