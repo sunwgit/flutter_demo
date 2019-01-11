@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'dart:io';
 
 import '../../model/post.dart';
 
 //获取数据的方法
 Future<Post> fetchPost() async {
   final response =
-      await http.get('https://jsonplaceholder.typicode.com/posts/1');
+      await http.get('https://jsonplaceholder.typicode.com/posts/1',headers: {HttpHeaders.authorizationHeader:''});
   if (response.statusCode == 200) {
     return Post.fromJson(json.decode(response.body));
   } else {
