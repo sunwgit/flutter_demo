@@ -23,6 +23,7 @@ import '../pages/network/fetchData.dart';
 import '../pages/network/fetchData2.dart';
 import '../pages/screenAdapter/index.dart';
 import '../pages/_eventBus/eventBusDemo.dart';
+import '../pages/swiper/swiperDemo.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -77,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
           _buildListView(FetchData2('FetchData2'), 'FetchData2'),
           _buildListView(ScreenDemo(title: 'ScreenDemo',), 'ScreenDemo'),
           _buildListView(EventBusDemo('EventBusDemo',), 'EventBusDemo'),
+          _buildListView(SwiperDemo('SwiperDemo',), 'SwiperDemo'),
         ],
       ),
       drawer: DrawerDemo(),
