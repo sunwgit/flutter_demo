@@ -24,7 +24,8 @@ class _DismissDemoState extends State<DismissDemo> {
               title: Text(item),
             ),
             onDismissed: (direction) {
-              print(direction);//DismissDirection.startToEnd DismissDirection.endToStart
+              print(
+                  direction); //DismissDirection.startToEnd DismissDirection.endToStart
               setState(() {
                 items.removeAt(index);
               });
@@ -32,7 +33,9 @@ class _DismissDemoState extends State<DismissDemo> {
                 content: Text('$item dismissed!'),
               ));
             },
-            background: Container(color: Colors.deepPurple,),
+            background: Container(
+              color: Colors.deepPurple,
+            ),
             secondaryBackground: Container(
               color: Colors.deepOrange,
             ),

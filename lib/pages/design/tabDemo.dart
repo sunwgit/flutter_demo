@@ -27,13 +27,24 @@ class TabDemo extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             Center(
-              child: Text('car',style: TextStyle(fontSize: 30,),),
+              child: Text(
+                'car',
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+              ),
             ),
             Center(
-              child: Text('bike',style: TextStyle(fontSize: 30,)),
+              child: Text('bike',
+                  style: TextStyle(
+                    fontSize: 30,
+                  )),
             ),
             Center(
-              child: Text('boat',style: TextStyle(fontSize: 30,)),
+              child: Text('boat',
+                  style: TextStyle(
+                    fontSize: 30,
+                  )),
             )
           ],
         ),

@@ -33,12 +33,12 @@ class _MyCustomFormState extends State<MyCustomForm> {
             TextField(
               autofocus: true,
               decoration: InputDecoration(
-                hintText: 'First TextField(This is a hintText)'
-              ),
+                  hintText: 'First TextField(This is a hintText)'),
             ),
             TextField(
               focusNode: myFocusNode,
-              decoration: InputDecoration(labelText: 'Second Textfield(This is a labelText)'),
+              decoration: InputDecoration(
+                  labelText: 'Second Textfield(This is a labelText)'),
             )
           ],
         ),

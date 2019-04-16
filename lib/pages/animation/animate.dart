@@ -29,10 +29,10 @@ class _AnimatedBoxState extends State<AnimatedBox> {
                 minWidth: 300,
               ),
               child: Center(
-                child: Text('AnimatedOpacity Demo',style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18
-                ),),
+                child: Text(
+                  'AnimatedOpacity Demo',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
               )),
         ),
       ),

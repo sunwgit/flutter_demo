@@ -13,7 +13,7 @@ class DrawerDemo extends StatelessWidget {
                 'Drawer Header',
                 style: TextStyle(
                   // color: Colors.deepOrange,
-                  fontSize: 25,
+                  fontSize: 16,
                 ),
               ),
             ),

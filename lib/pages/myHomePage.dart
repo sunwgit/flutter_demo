@@ -6,6 +6,7 @@ import '../pages/design/drawerDemo.dart';
 import '../pages/design/snackbarDemo.dart';
 import '../pages/design/orientationList.dart';
 import '../pages/design/tabDemo.dart';
+import '../pages/design/wrapDemo.dart';
 import '../pages/forms/formDemo.dart';
 import '../pages/forms/focusNodeDemo.dart';
 import '../pages/forms/textFieldChange.dart';
@@ -24,6 +25,7 @@ import '../pages/network/fetchData2.dart';
 import '../pages/screenAdapter/index.dart';
 import '../pages/_eventBus/eventBusDemo.dart';
 import '../pages/swiper/swiperDemo.dart';
+import '../pages/bottomNavBar/bottomNavBar.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -76,9 +78,27 @@ class _MyHomePageState extends State<MyHomePage> {
           _buildListView(PassDataDemo('PassDataDemo'), 'PassDataDemo'),
           _buildListView(FetchData('FetchData'), 'FetchData'),
           _buildListView(FetchData2('FetchData2'), 'FetchData2'),
-          _buildListView(ScreenDemo(title: 'ScreenDemo',), 'ScreenDemo'),
-          _buildListView(EventBusDemo('EventBusDemo',), 'EventBusDemo'),
-          _buildListView(SwiperDemo('SwiperDemo',), 'SwiperDemo'),
+          _buildListView(
+              ScreenDemo(
+                title: 'ScreenDemo',
+              ),
+              'ScreenDemo'),
+          _buildListView(
+              EventBusDemo(
+                'EventBusDemo',
+              ),
+              'EventBusDemo'),
+          _buildListView(
+              SwiperDemo(
+                'SwiperDemo',
+              ),
+              'SwiperDemo'),
+          _buildListView(
+              BottomNavBar(
+                'bottom navgation bar',
+              ),
+              'bottom navgation bar'),
+          _buildListView(WrapDemo(), 'WrapDemo'),
         ],
       ),
       drawer: DrawerDemo(),

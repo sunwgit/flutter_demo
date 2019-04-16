@@ -24,34 +24,33 @@ class SwiperDemo extends StatelessWidget {
             autoplay: true,
             duration: 1000,
             pagination: SwiperCustomPagination(
-              builder: (BuildContext context,SwiperPluginConfig config){
-                return ConstrainedBox(
-                        child: new Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: <Widget>[
-                            new Expanded(
-                              child: new Align(
-                                alignment: Alignment.bottomCenter,
-                                // child: new DotSwiperPaginationBuilder(
-                                //         color: Colors.greenAccent,
-                                //         activeColor: Colors.red,
-                                //         size: 10.0,
-                                //         activeSize: 20.0)
-                                //     .build(context, config),
-                                child: RectSwiperPaginationBuilder(
-                                  activeColor: Colors.greenAccent,
-                                  color: Colors.lightBlue,
-                                  size: Size(30, 10),
-                                  activeSize: Size(45, 15)
-                                ).build(context, config),
-                              ),
-                            )
-                          ],
-                        ),
-                        constraints: new BoxConstraints.expand(height: 200.0),
-                      );
-              }
-            ),
+                builder: (BuildContext context, SwiperPluginConfig config) {
+              return ConstrainedBox(
+                child: new Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: <Widget>[
+                    new Expanded(
+                      child: new Align(
+                        alignment: Alignment.bottomCenter,
+                        // child: new DotSwiperPaginationBuilder(
+                        //         color: Colors.greenAccent,
+                        //         activeColor: Colors.red,
+                        //         size: 10.0,
+                        //         activeSize: 20.0)
+                        //     .build(context, config),
+                        child: RectSwiperPaginationBuilder(
+                                activeColor: Colors.greenAccent,
+                                color: Colors.lightBlue,
+                                size: Size(30, 10),
+                                activeSize: Size(45, 15))
+                            .build(context, config),
+                      ),
+                    )
+                  ],
+                ),
+                constraints: new BoxConstraints.expand(height: 200.0),
+              );
+            }),
           )),
     );
   }

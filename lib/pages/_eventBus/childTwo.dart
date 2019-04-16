@@ -26,7 +26,10 @@ class _ChildTwoState extends State<ChildTwo> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        Text(widget.title,style: Theme.of(context).textTheme.headline,),
+        Text(
+          widget.title,
+          style: Theme.of(context).textTheme.headline,
+        ),
         Text('从兄弟组件传过来的值：$dataFromSibling')
       ],
     );

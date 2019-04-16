@@ -21,14 +21,17 @@ class _FormDemoState extends State<FormDemo> {
         padding: const EdgeInsets.all(20),
         child: Form(
           key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
             children: <Widget>[
               _buildFormItem('用户名'),
               _buildFormItem('密码'),
               Center(
                 child: RaisedButton(
                   onPressed: () {
+                    print('>>>>>>>>>>>>>>>>>>>>>');
+                    print(_formKey.currentContext.size);
+                    print(_scaffoldKey.currentContext.size);
+                    print(this.context.size);
                     if (_formKey.currentState.validate()) {
                       _scaffoldKey.currentState.showSnackBar(
                         SnackBar(
@@ -37,7 +40,10 @@ class _FormDemoState extends State<FormDemo> {
                       );
                     }
                   },
-                  child: Text('登录',style: TextStyle(color: Colors.white),),
+                  child: Text(
+                    '登录',
+                    style: TextStyle(color: Colors.white),
+                  ),
                   color: Colors.deepPurple,
                 ),
               )
@@ -58,15 +64,15 @@ class _FormDemoState extends State<FormDemo> {
           TextFormField(
             autofocus: true,
             autovalidate: true,
+            keyboardType: TextInputType.number,
             validator: (value) {
               if (value.isEmpty) {
                 return '请输入$itemName';
               }
             },
             decoration: InputDecoration(
-              icon: itemName == '用户名'?Icon(Icons.person):Icon(Icons.lock),
-              labelText: '请输入$itemName'
-            ),
+                icon: itemName == '用户名' ? Icon(Icons.person) : Icon(Icons.lock),
+                labelText: '请输入$itemName'),
           ),
         ],
       ),
