@@ -26,6 +26,8 @@ import '../pages/screenAdapter/index.dart';
 import '../pages/_eventBus/eventBusDemo.dart';
 import '../pages/swiper/swiperDemo.dart';
 import '../pages/bottomNavBar/bottomNavBar.dart';
+import '../pages/sliver/gird_list_demo.dart';
+import '../pages/sliver/collapseing_list.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -44,6 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: GridView.count(
         crossAxisCount: 2,
         children: <Widget>[
+          _buildListView(CollapsingList(), 'CollapsingList'),
+          _buildListView(GridListDemo(), 'GridListDemo'),
           _buildListView(Counter(title: 'Counter'), 'Counter'),
           _buildListView(AnimatedBox(title: 'AnimatedBox'), 'AnimatedBox'),
           _buildListView(SnackBarDemo(title: 'SnackBar'), 'SnackBar'),
